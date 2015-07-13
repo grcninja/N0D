@@ -1,69 +1,24 @@
-<html>
-<head>
-<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-<meta content="text/css" http-equiv="Content-Style-Type">
-<title>N0D &#13;
-(Null0 Defense)</title>
-</head>
-<body>
-<h1 align="center" class="root">
-<a name="25j9u6gadgi48mrkl1r0ukmtkn">N0D &#13;
-(Null0 Defense)</a>
-</h1>
-<h2 class="topic">
-<a name="07hu45o7h68nbrcqls4cebffi6">Project Summary</a>
-</h2>
-<body="topic">
-<a name="7t1v14atgrh2kut952gtknqaic">The purpose of this project is to build a tool for organizations that do not have firewalls or web proxies to filter malicious traffic</a>
-</body>
-<h2 class="topic">
-<a name="5io7fpak562ct35tq3mqr11f2j">Development Plan</a>
-</h2>
-<h3 class="topic">1. <a name="4o7ujhulfk4c78pm2hmgf4lc56">Phase 1 - BareBones - Severely Manual</a>
-</h3>
-<h4 class="topic">1.1 <a name="5b45808q26vofapmcc2f663gb2">Read a Text File list of domains from a directory</a>
-</h4>
-<h4 class="topic">1.2 <a name="78rack3b7ehlqkprb6q9ovdlrj">Find the current IP address of the domain</a>
-</h4>
-<h4 class="topic">1.3 <a name="5frb0vahbs23jqabujn041fsah">Ping the domain on port 80 and register if it is UP or Down</a>
-</h4>
-<body>1.3.1 <a name="6tactle7eprigupg0enub29g06">Write the results to a text file "SOC-Null0_Malware_Status_YYYYMMDD.txt</a>
-</body>
-<ul>
-<li>Domain Name
-<li>IP address
-<li>UP/DOWN status
-	<ul>
-	<li>If it is UP:
-		<ul>
-		<li>Write the results to a text file "SOC-Null0_Malware_RuleAdditions_YYYYMMDD.txt [Null0 config statement]
-		</ul>
-	<li>If it is DOWN:
-		<ul>
-		<li> Write the results to a text file "SOC-Null0_Malware_RuleRemoval_YYYYMMDD.txt: [Null0 config statement]
-		</ul>
-	<li>Third item of embedded list
-	</ul>
-</ul>
+#(Null0 Defense)
 
-<h4 class="topic">1.4 <a name="2haankssv9nas2lfdh13chckl1">Maintain a Master list of what's being Null routed (adding and removing as needed)</a>
-</h4>
-<h3 class="topic">2. <a name="4a0763mvmer6a3ut3fcijelt25">Phase 2 - Add Meat - Partial Automation</a>
-</h3>
-<h4 class="topic">2.1 <a name="4hstudq1fmaghscjp65jvbuj9p">Email the text files to a person or group</a>
-</h4>
-<h3 class="topic">3. <a name="5n42rvaq3qesf1dhh4okmocsj1">Phase 3 - Add Skin - Mostly Automated</a>
-</h3>
-<h4 class="topic">3.1 <a name="0h85k8pgdbqj330vnorqemn1ut">Use an API to pull the malware domain name changes (adds/deleted) from malwaredomains.com</a>
-</h4>
-<h3 class="topic">4. <a name="7lu2so8vknhff12n31c4id8fc7">Phase 4 - Add Brain - Fully Automated</a>
-</h3>
-<h4 class="topic">4.1 <a name="18leql45u9veggbqku8l4gf99i">One button click for network team to update the router</a>
-</h4>
-<h3 class="topic">5. <a name="0qpltdbnco77accl24rsrbr8ev">Phase 5 &amp; Forward - Shopping for Accessories - Enhancements</a>
-</h3>
-<h4 class="topic">5.1 <a name="0rii84gdjodt4790f1382ovpc9">Add different intel sources to pull malware domain lists from</a>
-</h4>
-</body>
-</html>
+##Project Summary  
+The purpose of this project is to build a tool for organizations that do not have firewalls or web proxies to filter malicious traffic
+##Development Plan
+###1. <a name="4o7ujhulfk4c78pm2hmgf4lc56">Phase 1 - BareBones - Severely Manual
+####1.1 Read a Text File list of domains from a directory
+####1.2 Find the current IP address of the domain
+####1.3 >Ping the domain on port 80 and register if it is UP or Down
+*1.3.1 Write the results to a text file "SOC-Null0_Malware_Status_YYYYMMDD.txt
+**Domain Name
+**IP address
+**UP/DOWN status
+***If it is UP:  Write the results to a text file "SOC-Null0_Malware_RuleAdditions_YYYYMMDD.txt [Null0 config statement]
+***If it is DOWN: Write the results to a text file "SOC-Null0_Malware_RuleRemoval_YYYYMMDD.txt: [Null0 config statement]		
+####1.4 Maintain a Master list of what's being Null routed (adding and removing as needed)
+###2.  Phase 2 - Add Meat - Partial Automation
+####2.1 Email the text files to a person or group
+###3.  Phase 3 - Add Skin - Mostly Automated
+####3.1 Use an API to pull the malware domain name changes (adds/deleted) from malwaredomains.com
+###4. Phase 4 - Add Brain - Fully Automated
+####4.1 One button click for network team to update the router
+###5. Phase 5 &amp; Forward - Shopping for Accessories - Enhancements
+####5.1 Add different intel sources to pull malware domain lists from
